@@ -1,5 +1,8 @@
 <?php
 
+use config\Model;
+use config\System;
+
 session_start();
 header_remove('X-Powered-By');
 header("X-XSS-Protection: 1; mode=block");
@@ -20,8 +23,13 @@ if (!empty($_SERVER['HTTPS'])) {
 }
 
 define('APP_ROOT', $config['base_url']);
-
 define('APP_NAME', "Soleil");
 
 require_once 'helper/Autoload.php';
 require_once 'vendor/autoload.php';
+
+$model = new Model();
+$system = new System();
+
+$system->init();
+$model->closeConnection();
