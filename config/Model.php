@@ -7,7 +7,7 @@ use PDO;
 class Model extends Config
 {
 
-    private PDO $con;
+    private $con;
 
     public function __construct()
     {

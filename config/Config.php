@@ -4,7 +4,7 @@ namespace config;
 
 class Config
 {
-    const DEV_MODE = false;
+    const DEV_MODE = true;
 
     /* Global data */
     const DBHOST = '';
@@ -17,7 +17,5 @@ class Config
     const LOCAL_DBUSER = 'root';
     const LOCAL_DBPASS = '';
     const LOCAL_DBNAME = 'soleil';
-
-
 
 }

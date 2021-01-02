@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="<?= APP_NAME ?>"/>
+    <link rel="canonical" href="<?= APP_ROOT ?>"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<?= APP_NAME ?>"/>
+    <meta property="og:description" content="<?= APP_NAME ?>"/>
+    <meta property="og:url" content="<?= APP_ROOT ?>"/>
+    <meta property="og:site_name" content="<?= APP_NAME ?>"/>
+    <title><?= APP_NAME ?></title>
+    <link href="<?= APP_ROOT ?>resources/site/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= APP_ROOT ?>resources/site/assets/css/normalize/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= APP_ROOT ?>resources/site/assets/css/ionicons/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= APP_ROOT ?>resources/site/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' id='owl-carousel-css'
+          href='<?= APP_ROOT ?>app/content/site/assets/css/owlcarrousel/owl.carousel.min8a54.css?ver=1.0.0'
+          type='text/css'
+          media='all'/>
+</head>
+
+<body>
+
+<div class="presentation">
+    <div class="col-md-4 hideMobile">
+        <div class="mid"></div>
+    </div>
+    <div class="col-md-12">
+        <center>
+            <a href="/"><img src="<?= APP_ROOT ?>/resources/site/assets/images/sol-3.png" class="img-fluid" width="180"></a>
+        </center>
+    </div>
+</div>
+
+<?= $this->render(); ?>
+
+<script src="<?= APP_ROOT ?>resources/site/assets/js/jquery/jquery.min.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="<?= APP_ROOT ?>resources/site/assets/js/popper/umd/popper.min.js"></script>
+<script src="<?= APP_ROOT ?>resources/site/assets/js/bootstrap/bootstrap.min.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="<?= APP_ROOT ?>resources/site/assets/js/init.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script type='text/javascript'
+        src='<?= APP_ROOT ?>app/content/site/assets/css/owlcarrousel/owl.carousel.min8a54.js?ver=1.0.0'></script>
+</body>
+
+</html>
