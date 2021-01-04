@@ -2,12 +2,6 @@
 /*@import url('https://db.onlinewebfonts.com/c/38f3e99009aa7a2133706b96bea6212d?family=Kremlin');*/
 /*@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');*/
 
-@font-face {
-    font-family: "Kremlin";
-    src: url("../fonts/kremlin/kremlin-eot.eot");
-    src: url("../fonts/kremlin/kremlin-eot.eot?#iefix") format("embedded-opentype"), url("../fonts/kremlin/kremlin-woff2.woff2") format("woff2"), url("../fonts/kremlin/kremlin-woff.woff") format("woff"), url("../fonts/kremlin/kremlin-ttf.ttf") format("truetype"), url("../fonts/kremlin/kremlin-svg.svg#Kremlin") format("svg");
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -55,7 +49,7 @@ a:hover {
 }
 
 .menu .nav-link {
-    font-family: "Kremlin";
+    font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 500;
     font-size: 21px;
