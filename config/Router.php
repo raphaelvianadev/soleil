@@ -5,11 +5,11 @@ namespace config;
 class Router
 {
 
-    protected array $routers = [
+    protected $routers = [
         'site' => 'site',
         'admin' => 'admin'
     ];
-    protected string $routerOnRaiz = 'site';
-    protected bool $onRaiz = true;
+    protected $routerOnRaiz = 'site';
+    protected $onRaiz = true;
 
 }

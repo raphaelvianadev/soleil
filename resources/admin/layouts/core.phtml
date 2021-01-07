@@ -54,141 +54,26 @@ function getUsername()
                     <span class="nav-link-text">Dashboard</span>
                 </a>
             </li>
-            <?php if($this->permissions->node('store')): ?>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Minha loja">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-1" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-shopping-basket"></i>
-                        <span class="nav-link-text">Minha loja</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="menu-li-1">
-                        <?php if($this->permissions->parent('store', 'products')): ?>
-                            <li>
-                                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-pacotes">
-                                    <i class="fa fa-cube"></i> Produtos
-                                </a>
-                                <ul class="sidenav-third-level collapse" id="menu-li-pacotes">
-                                    <li>
-                                        <a href="/admin/loja/produtos/adicionar">Adicionar</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/loja/produtos/gerenciar">Gerenciar</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/loja/produtos/adicionar-fotos">Adicionar fotos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'categories')): ?>
-                            <li>
-                                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-categories"><i class="fa fa-database"></i> Categorias</a>
-                                <ul class="sidenav-third-level collapse" id="menu-li-categories">
-                                    <li>
-                                        <a href="/admin/loja/categorias/adicionar">Adicionar</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/loja/categorias/gerenciar">Gerenciar</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'discounts')): ?>
-                            <li>
-                                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-descontos"><i class="fa fa-asterisk"></i> Descontos</a>
-                                <ul class="sidenav-third-level collapse" id="menu-li-descontos">
-                                    <li>
-                                        <a href="/admin/loja/descontos/adicionar">Adicionar</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/loja/descontos/gerenciar">Gerenciar</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'chargeback')): ?>
-                            <li>
-                                <a href="/admin/loja/estornos"><i class="fa fa-angle-double-left"></i> Estornos</a>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'capital')): ?>
-                            <li>
-                                <a href="/admin/loja/capital"><i class="fa fa-dollar"></i> Capital de Giro</a>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'transactions')): ?>
-                            <li>
-                                <a href="/admin/loja/transacoes"><i class="fa fa-retweet"></i> Transações</a>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('store', 'storage')): ?>
-                            <li>
-                                <a href="/admin/loja/estoque"><i class="fa fa-archive"></i> Estoque</a>
-                            </li>
-                        <?php endif ?>
-                    </ul>
-                </li>
-            <?php endif ?>
-            <?php if($this->permissions->node('site')): ?>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Site">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-3" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-sitemap"></i>
-                        <span class="nav-link-text">Site</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="menu-li-3">
-                        <?php if($this->permissions->parent('site', 'terms')): ?>
-                            <li>
-                                <a href="/admin/site/termos"><i class="fa fa-paperclip"></i> Termos de Uso</a>
-                            </li>
-                        <?php endif ?>
-                    </ul>
-                </li>
-            <?php endif ?>
-            <?php if($this->permissions->node('lookbook')): ?>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Lookbook">
+            <?php if($this->permissions->node('messages')): ?>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mensagens">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-4" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-book"></i>
-                        <span class="nav-link-text">Lookbook</span>
+                        <i class="fa fa-fw fa-paper-plane"></i>
+                        <span class="nav-link-text">Mensagens</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="menu-li-4">
-                        <?php if($this->permissions->parent('lookbook', 'drops')): ?>
+                        <?php if($this->permissions->parent('messages', 'add')): ?>
                             <li>
-                                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-drops"><i class="fa fa-cubes"></i> Drops</a>
-                                <ul class="sidenav-third-level collapse" id="menu-li-drops">
-                                    <li>
-                                        <a href="/admin/site/drop/adicionar">Adicionar</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/site/drop/adicionar-fotos">Adicionar fotos</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/site/drop/gerenciar">Gerenciar</a>
-                                    </li>
-                                </ul>
+                                <a href="/admin/site/mensagens/adicionar"><i class="fa fa-plus"></i> Adicionar mensagem</a>
                             </li>
                         <?php endif ?>
-                        <?php if($this->permissions->parent('lookbook', 'current')): ?>
+                        <?php if($this->permissions->parent('messages', 'edit')): ?>
                             <li>
-                                <a href="/admin/site/lookbook/atual"><i class="fa fa-arrow-circle-down"></i> Lookbook atual</a>
+                                <a href="/admin/site/mensagens/editar"><i class="fa fa-pencil"></i> Editar mensagem</a>
                             </li>
                         <?php endif ?>
-                    </ul>
-                </li>
-            <?php endif ?>
-            <?php if($this->permissions->node('settings')): ?>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Configurações">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#menu-li-2" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-cog"></i>
-                        <span class="nav-link-text">Configurações</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="menu-li-2">
-                        <?php if($this->permissions->parent('settings', 'gateways')): ?>
+                        <?php if($this->permissions->parent('messages', 'delete')): ?>
                             <li>
-                                <a href="/admin/configuracoes/gateways"><i class="fa fa-credit-card"></i> Formas de pagamento</a>
-                            </li>
-                        <?php endif ?>
-                        <?php if($this->permissions->parent('settings', 'users')): ?>
-                            <li>
-                                <a href="/admin/configuracoes/usuarios"><i class="fa fa-key"></i> Usuários admin.</a>
+                                <a href="/admin/site/mensagens/deletar"><i class="fa fa-remove"></i> Deletar mensagem</a>
                             </li>
                         <?php endif ?>
                     </ul>

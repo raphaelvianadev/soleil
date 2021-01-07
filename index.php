@@ -14,7 +14,7 @@ error_reporting(E_ALL);
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Campo_Grande');
 
-define('DOMAIN', "localhost");
+define('DOMAIN', "raphael.powerliga.com.br");
 
 if (!empty($_SERVER['HTTPS'])) {
     $config['base_url'] = 'https://' . DOMAIN . '/';
@@ -33,3 +33,5 @@ $system = new System();
 
 $system->init();
 $model->closeConnection();
+
+//$2y$10$Uw/SftgRPSW7VwYH2QtzFO2pK.u6x.Kj0E3wG3Ph5J3K9k2ZNtry2
