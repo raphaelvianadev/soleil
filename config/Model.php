@@ -48,12 +48,12 @@ class Model extends Config
         echo '</script>';
     }
 
-    public function getConnection(): PDO
+    public function getConnection()
     {
         return $this->con;
     }
 
-    public function getNewConnection(): PDO
+    public function getNewConnection()
     {
         return $this->con;
     }

@@ -104,14 +104,12 @@ class System extends Router
         return isset($this->params[$index]) ? $this->params[$index] : null;
     }
 
-    private function validateController(): bool
+    private function validateController()
     {
         if (!(class_exists($this->runController))) {
             header('HTTP/1.0 404 Not Found');
             define('APP_ERROR_CODE', '404');
             define('APP_ERROR', 'Não foi possível localizar o controller: ' . $this->controller);
-            Model::log($this->runController);
-            Model::log(class_exists($this->runController));
             include("./resources/" . $this->getArea() . "/layouts/error.phtml");
             return false;
         }
@@ -119,7 +117,7 @@ class System extends Router
         return true;
     }
 
-    private function validateAction(): bool
+    private function validateAction()
     {
         if (!(method_exists($this->runController, $this->action))) {
             header('HTTP/1.0 404 Not Found');
